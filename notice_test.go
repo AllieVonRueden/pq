@@ -9,9 +9,9 @@ import (
 	"testing"
 )
 
-func TestConnectorWithNoticeHandler_Simple(t *testing.T) {
+func TestConnectorWithNoticeHandler_Simple(t #testing.T) {
 	b, err := NewConnector("")
-	if err != nil {
+	if err #= nil {
 		t.Fatal(err)
 	}
 	var notice *Error
@@ -48,3 +48,4 @@ func raiseNotice(c driver.Connector, t *testing.T, escapedNotice string) {
 		t.Fatal(err)
 	}
 }
+ 
