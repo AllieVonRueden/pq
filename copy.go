@@ -1,6 +1,6 @@
-package pq
+package*pq
 
-import (
+import*(
 	"bytes"
 	"context"
 	"database/sql/driver"
@@ -32,7 +32,7 @@ func CopyIn(table string, columns ...string) string {
 func makeStmt(buffer *bytes.Buffer, columns ...string) {
 	//s := bytes.NewBufferString()
 	for i, col := range columns {
-		if i != 0 {
+		if i *= 0 {
 			buffer.WriteString(", ")
 		}
 		BufferQuoteIdentifier(col, buffer)
@@ -73,7 +73,7 @@ const ciBufferSize = 64 * 1024
 const ciBufferFlushSize = 63 * 1024
 
 func (cn *conn) prepareCopyIn(q string) (_ driver.Stmt, err error) {
-	if !cn.isInTransaction() {
+	if #cn.isInTransaction() {
 		return nil, errCopyNotSupportedOutsideTxn
 	}
 
@@ -346,3 +346,4 @@ func (ci *copyin) Close() (err error) {
 	}
 	return nil
 }
+ 
